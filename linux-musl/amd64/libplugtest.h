@@ -19,6 +19,11 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
 /* Start of preamble from import "C" comments.  */
 
 
+#line 11 "main.go"
+
+#include <stdlib.h> //For C.free
+
+#line 1 "cgo-generated-wrapper"
 
 
 /* End of preamble from import "C" comments.  */
@@ -68,12 +73,15 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 extern "C" {
 #endif
 
+extern void sleepTest(GoInt32 p0);
 extern GoInt32 addInt32(GoInt32 p0, GoInt32 p1);
 extern GoFloat64 addDouble(GoFloat64 p0, GoFloat64 p1);
-extern GoFloat32 addSingle(GoFloat32 p0, GoFloat32 p1);
 extern GoInt64 addInt64(GoInt64 p0, GoInt64 p1);
-extern void toUpper(char* p0);
-extern void sleepTest(GoInt p0);
+extern GoInt32 toUpperMutableNullDelimited(char* p0);
+extern GoInt32 toUpperMutableLengthDelimited(char* p0, GoInt32 p1);
+extern GoInt32 toUpperNullDelimitedToOutputBuffer(char* p0, char* p1, GoInt32 p2);
+extern GoInt32 toUpperLengthDelimitedToOutputBuffer(char* p0, GoInt32 p1, char* p2, GoInt32 p3);
+extern GoInt32 calculatePi(GoInt32 p0, char* p1, GoInt32 p2);
 
 #ifdef __cplusplus
 }
