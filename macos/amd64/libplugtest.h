@@ -77,10 +77,7 @@ extern void sleepTest(GoInt32 seconds);
 extern GoInt32 addInt32(GoInt32 x, GoInt32 y);
 extern GoFloat64 addDouble(GoFloat64 x, GoFloat64 y);
 extern GoInt64 addInt64(GoInt64 x, GoInt64 y);
-extern GoInt32 toUpperMutableNullDelimited(char* input);
-extern GoInt32 toUpperMutableLengthDelimited(char* input, GoInt32 inputLen);
-extern GoInt32 toUpperNullDelimitedToOutputBuffer(char* input, char* output, GoInt32 outputCap);
-extern GoInt32 toUpperLengthDelimitedToOutputBuffer(char* input, GoInt32 inputLen, char* output, GoInt32 outputCap);
+extern GoInt32 toUpper(char* input, GoInt32 inputLen, char* output, GoInt32 outputCap);
 extern GoInt32 calculatePi(GoInt32 digits, char* output, GoInt32 outputCap);
 
 #ifdef __cplusplus
